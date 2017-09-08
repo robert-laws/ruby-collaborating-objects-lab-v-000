@@ -32,6 +32,7 @@ class Artist
       end
     else
       result = Artist.new(name)
+      result.save
     end
     result
   end
