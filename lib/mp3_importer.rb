@@ -15,6 +15,7 @@ class MP3Importer
   end
 
   def import
+    binding.pry
     @all_files.each do |file|
       parts = file.split(" - ")
       artist = Artist.find_or_create_by_name(parts[0])
