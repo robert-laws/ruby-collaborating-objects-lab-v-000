@@ -31,7 +31,7 @@ class Artist
       end
     else
       result = Artist.new(name)
-    end  
+    end
     result
   end
 
