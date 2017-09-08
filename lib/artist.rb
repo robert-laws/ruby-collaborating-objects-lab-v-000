@@ -19,7 +19,8 @@ class Artist
 
   def self.find_or_create_by_name(name)
     result = ""
-    if all.size > 0
+    val = @@all
+    if val.size > 0
       binding.pry
       all.each do |a|
         if a.name == name
