@@ -3,7 +3,6 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-    self.files
   end
 
   def files
@@ -12,6 +11,6 @@ class MP3Importer
   end
 
   def import
-    
+
   end
 end
