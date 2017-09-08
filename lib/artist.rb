@@ -22,7 +22,7 @@ class Artist
     val = @@all
     if val.size > 0
       binding.pry
-      all.each do |a|
+      val.each do |a|
         if a.name == name
           result = a
           break
