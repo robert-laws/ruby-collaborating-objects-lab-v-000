@@ -18,23 +18,22 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    result = ""
-    val = @@all
-    if val.size > 0
-      val.each do |a|
+    artist = ""
+    if @@all.size > 0
+      @@all.each do |a|
         if a.name == name
-          result = a
+          artist = a
           break
         else
-          result = Artist.new(name)
-          result.save
+          artist = Artist.new(name)
+          artist.save
         end
       end
     else
-      result = Artist.new(name)
-      result.save
+      artist = Artist.new(name)
+      artist.save
     end
-    result
+    artist
   end
 
   def print_songs
