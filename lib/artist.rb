@@ -18,7 +18,19 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    
+    res = false
+    a = {}
+    self.all.each do |artist|
+      res = artist.name == name ? true : false
+      res ? a = artist : a = {}
+      break if res == true
+    end
+
+    if res == false
+      a = Artist.new(name)
+      a.save
+    end
+    a
   end
 
   def print_songs
