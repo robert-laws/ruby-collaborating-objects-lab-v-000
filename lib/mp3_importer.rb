@@ -1,3 +1,4 @@
+require 'pry'
 class MP3Importer
   attr_accessor :path
   attr_reader :files
@@ -15,6 +16,7 @@ class MP3Importer
   def import
     self.files
     @files.each do |file|
+      binding.pry
       parts = file.split(" - ")
       artist = Artist.find_or_create_by_name(parts[0])
       artist.add_song(parts[1])
