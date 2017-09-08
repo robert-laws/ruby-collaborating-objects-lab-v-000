@@ -7,5 +7,6 @@ class MP3Importer
 
   def files
     files = Dir.glob(@path + "/*")
+    files = files.collect { |file| file.split("/").last }
   end
 end
