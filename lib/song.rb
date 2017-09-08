@@ -11,7 +11,7 @@ class Song
     song = Song.new(parts[1])
     a = artist_name(parts[0])
     binding.pry
-    self.artist = a
+    @artist = a
     song
   end
 
