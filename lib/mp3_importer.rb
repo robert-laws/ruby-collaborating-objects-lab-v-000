@@ -15,6 +15,7 @@ class MP3Importer
 
   def import
     self.files
+    binding.pry
     @files.each do |file|
       binding.pry
       parts = file.split(" - ")
