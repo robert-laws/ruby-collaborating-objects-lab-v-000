@@ -28,6 +28,7 @@ class Artist
           break
         else
           result = Artist.new(name)
+          result.save
         end
       end
     else
