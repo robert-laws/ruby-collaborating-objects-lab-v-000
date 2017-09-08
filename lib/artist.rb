@@ -21,7 +21,6 @@ class Artist
     result = ""
     val = @@all
     if val.size > 0
-      binding.pry
       val.each do |a|
         if a.name == name
           result = a
