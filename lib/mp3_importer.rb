@@ -1,10 +1,11 @@
 class MP3Importer
-  attr_accessor :path, :music_importer
+  attr_accessor :path
 
   def initialize(path)
     @path = path
-    @music_importer = Dir.glob(path + "*")
   end
 
-
+  def files
+    files = Dir.glob(@path + "*")
+  end
 end
