@@ -20,5 +20,6 @@ class MP3Importer
       artist = Artist.find_or_create_by_name(parts[0])
       artist.add_song(parts[1])
     end
+    binding.pry
   end
 end
