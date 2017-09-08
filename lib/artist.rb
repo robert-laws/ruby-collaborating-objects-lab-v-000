@@ -18,16 +18,19 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    binding.pry
     result = ""
-    all.each do |a|
-      if a.name == name
-        result = a
-        break
-      else
-        result = Artist.new(name)
+    if all.size > 0
+      all.each do |a|
+        if a.name == name
+          result = a
+          break
+        else
+          result = Artist.new(name)
+        end
       end
-    end
+    else
+      result = Artist.new(name)
+    end  
     result
   end
 
